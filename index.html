@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="baidu-site-verification" content="code-e5YVkawWES" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>小世炎Game</title>
+    <meta name="keywords" content="小世炎,xiaoshiyan,迷宫" />
+    <meta name="description" content="小世炎最牛，迷宫游戏" />
+    <script src="javascript/time.js"></script>
+    <script src="javascript/seekroadGame.js"></script>
+    <style>
+        .button {
+            padding: 0 10px;
+            background-color: rgba(112, 120, 124, 0.281);
+        }
+        
+        .cmd {
+            border: 0px;
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            color: black;
+            background-color: rgba(153, 158, 163, 0.329);
+        }
+        
+        #cmd {
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body style='background-color:rgba(123, 134, 134, 0.11);'>
+    <div>
+        <center>
+            <h1 style="color: rgba(243, 117, 33, 0.973);font-family: Verdana, Geneva, Tahoma, sans-serif;" id="p1"></h1>
+            <h1 style="color: rgba(51, 133, 228, 0.986);font-family: serif;" id="p2"></h1>
+            <a name="a">
+                <p style="color: rgb(255, 187, 0);">——————————xiaoshiyan</p>
+            </a>
+            <hr>
+        </center>
+    </div>
+    <p style="color: rgba(255, 145, 0, 0.685);"></p>
+    <script>
+        data()
+        setInterval("data()", 60000)
+        time()
+        setInterval("time()", 1000)
+    </script>
+    <div>
+        <center>
+            <p>迷宫游戏:</p>
+            <div id="board">
+                <a href="#a"><button onclick="main()">点击</button></a>
+            </div>
+            <div id="cmd"></div>
+            <div id="win"></div>
+        </center>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <p align="right" style="color: rgba(69, 83, 83, 0.521);">China 20211860224--- Made by <strong>© Xiaoshiyan</strong></p>
+        <p align="right" style="color: rgba(228, 238, 238, 0.637);">假装的版权号heihei</p>
+    </div>
+    <script>
+        function  e() {   
+            var  key = event.keyCode;
+            if (key == 13) {
+                main()
+            } else if (key == 119) {
+                ww()  
+            } else if (key == 97) {        
+                aa()     
+            } 
+            else if (key == 115) {
+                ss()
+            } else if (key == 100) {
+                dd()
+            }
+        }
+        document.onkeypress = e;
+    </script>
+</body>
+
+</html>
