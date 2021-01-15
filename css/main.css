@@ -3,25 +3,33 @@
     padding: 0;
 }
 
+:root {
+    color: aliceblue;
+}
+
 body {
     background-color: rgb(63, 63, 63);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 
-i.fa {
-    color: #7f8;
-}
-
 a {
-    color: #7f8;
+    color: aliceblue;
     text-decoration: none;
 }
 
 img {
     -webkit-user-drag: none;
+}
+
+.container i.fa {
+    color: #7f8;
+}
+
+.container a {
+    color: #7f8;
 }
 
 .avatar {
@@ -33,7 +41,15 @@ img {
     margin-bottom: 20px;
 }
 
+.container p {
+    color: aliceblue;
+    font-size: larger;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 .container {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -45,6 +61,7 @@ img {
     line-height: 60px;
     text-align: center;
     border: 5px solid #7f8;
+    margin: auto;
     margin-bottom: 20px;
     border-radius: 10px;
     filter: hue-rotate(calc(var(--i) * 90deg));
@@ -55,19 +72,19 @@ img {
     content: "";
     position: absolute;
     width: 15px;
-    height: 5px;
+    height: 8px;
     background-color: rgb(63, 63, 63);
     transform: skew(50deg);
     transition: all 0.5s;
 }
 
 .container a::before {
-    top: -5px;
+    top: -7px;
     left: 10%;
 }
 
 .container a::after {
-    bottom: -5.5px;
+    bottom: -5px;
     right: 10%;
 }
 
@@ -77,4 +94,11 @@ img {
 
 .container a:hover::after {
     right: 80%;
+}
+
+footer {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 20px;
 }
