@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta content="width=device-width,user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -10,11 +11,29 @@
 
     <div class="container">
         <img class="avatar" src="https://blog.xiaoshiyan.top/wp-content/uploads/2020/12/header.jpg">
+        <p id="hitokoto">:D 获取中...
+            <p id="hitokoto_from"></p>
+        </p>
+        <script>
+            fetch('https://v1.hitokoto.cn')
+                .then(response => response.json())
+                .then(data => {
+                    const hitokoto = document.getElementById('hitokoto')
+                    document.getElementById('hitokoto_from').innerText = "--" + data.from
+                    hitokoto.innerText = data.hitokoto
+                })
+                .catch(console.error)
+        </script>
+
         <a style="--i: 2" href="https://blog.xiaoshiyan.top"><i class="fa fa-heart" aria-hidden="true"></i> 我的博客</a>
         <a style="--i: 1" href="https://file.xiaoshiyan.top/seekRoadGame/"><i class="fa fa-map" aria-hidden="true"></i> 迷宫游戏</a>
         <a style="--i: 3" href="https://file.xiaoshiyan.top/show/"><i class="fa fa-paw" aria-hidden="true"></i> css练习</a>
         <a style="--i: 4" href="https://github.com/xiaoshiyan-programmer"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
     </div>
+    <footer>
+        <p>Copyright © 2020-2021 xiaoshiyan</p>
+        <a href="https://beian.miit.gov.cn/">渝ICP备 2020014856号-1</a>
+    </footer>
 </body>
 
 </html>
