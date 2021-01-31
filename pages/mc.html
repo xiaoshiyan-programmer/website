@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../css/mc.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 前端展示 -->
+    <img src="https://bing.mcloc.cn/api">
+    <div id="title">
+        <h1>{{ title }}</h1>
+        <p> {{ message }}</p>
+        <p>{{massege1}}</p>
+    </div>
+    <div id="main">
+        <a href="#" v-bind:title="link">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> {{massege}}
+        </a>
+    </div>
+    <div id="footer">
+        <h3>{{title}}</h3>
+        <p>{{massege}}</p>
+        <p>{{massege1}}</p>
+    </div>
+    <!-- vue内容 -->
+    <script>
+        var title = new Vue({
+            el: '#title',
+            data: {
+                title: 'mc又一服务器',
+                message: '小世炎服务器',
+                massege1: '虽然现在啥也没有，只是纯生存，万一以后把插件搞好了呢'
+            }
+        })
+        var main = new Vue({
+            el: '#main',
+            data: {
+                link: 'ip:49.232.174.155',
+                massege: '49.232.174.155'
+            }
+        })
+        var footer = new Vue({
+            el: '#footer',
+            data: {
+                title: '为了游玩服务器，你需要：',
+                massege: '一台电脑，安装Java，安装mc客户端，为客户端安装forge',
+                massege1: 'forge客户端建议百度hmcl'
+            }
+        })
+    </script>
+
+</body>
+
+</html>
