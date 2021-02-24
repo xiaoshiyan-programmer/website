@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="https://bing.mcloc.cn/api" />
+    <div id="app">
+      <div>
+        <div class="musicScore">
+          <textarea cols="50" rows="5">{{musicScore.join(" ")}} </textarea>
+        </div>
+        <p>当前基准音：{{currentTone}}</p>
+        <button @click="play()">播放</button>
+        <button @click="del()">删除</button>
+        <div class="board">
+          <div class="white" id="lower" @click="decreaseTone()">
+            <div class="pn">降</div>
+          </div>
+          <div class="white" @click="addTone(1)"><div class="pn">1</div></div>
+          <div class="white" @click="addTone(3)"><div class="pn">2</div></div>
+          <div class="white" @click="addTone(5)"><div class="pn">3</div></div>
+          <div class="white" @click="addTone(6)"><div class="pn">4</div></div>
+          <div class="white" @click="addTone(8)"><div class="pn">5</div></div>
+          <div class="white" @click="addTone(10)"><div class="pn">6</div></div>
+          <div class="white" @click="addTone(12)"><div class="pn">7</div></div>
+          <div class="white" id="upper" @click="increaseTone()">
+            <div class="pn">升</div>
+          </div>
+
+          <!-- black -->
+          <div class="black" style="left: 21.5%" @click="addTone(2)"></div>
+          <div class="black" style="left: 32%" @click="addTone(4)"></div>
+          <div class="black" style="left: 52.5%" @click="addTone(7)"></div>
+          <div class="black" style="left: 63%" @click="addTone(9)"></div>
+          <div class="black" style="left: 73.5%" @click="addTone(11)"></div>
+        </div>
+        <div>
+          <button @click="addDelay(1)">1</button>
+          <button @click="addDelay(2)">2</button>
+          <button @click="addDelay(4)">4</button>
+          <button @click="addDelay(8)">8</button>
+          <button @click="addDelay(16)">16</button>
+          <button @click="addDelay(32)">32</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

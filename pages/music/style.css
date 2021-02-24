@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+img {
+  -webkit-user-drag: none;
+  z-index: -1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  font-size: 15px;
+  width: 10%;
+  background-color: rgb(102, 102, 102);
+  color: aliceblue;
+  border: none;
+  margin: 5px;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: white;
+  color: rgb(100, 100, 100);
+}
+.board {
+  position: relative;
+  width: 600px;
+  font-size: 0;
+}
+#app {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(8px);
+  color: rgb(255, 141, 48);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #app {
+    width: 100vw;
+  }
+  .board {
+    width: 100vw;
+  }
+}
+.white {
+  border-radius: 0px 0px 8px 8px;
+  position: relative;
+  font-size: 10px;
+  height: 20vh;
+  width: 10%;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  border: rgb(184, 184, 184) solid 1px;
+}
+.pn {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  user-select: none;
+}
+.black {
+  border-radius: 0px 0px 5px 5px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  width: 5%;
+  height: 12vh;
+  background-color: black;
+}
+.white:hover,
+.black:hover {
+  background-color: rgb(167, 167, 167);
+}
+.musicScore {
+  height: 100px;
+  margin-bottom: 50px;
+}
+#lower,
+#upper {
+  margin: 0px 5px;
+}
